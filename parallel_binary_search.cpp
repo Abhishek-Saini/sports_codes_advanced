@@ -65,6 +65,7 @@ lld findGcd(lld a, lld b){
 // string S[lim];
 lld A[lim];
 
+// Disjoint Union Find
 struct UF {
     UF(int n) {
         A.resize(n + 1);
@@ -104,9 +105,6 @@ int main(){
         int y = scd();
         Edges.emplace_back(x, y);
     }
-    // sort(Edges.begin(), Edges.end(), [](pair<int,int>& a, pair<int,int>& b) {
-    //     return a.second < b.second;
-    // });
     int queries = scd();
     for(int i = 1; i <= queries; i++) {
         X[i] = scd();
@@ -129,21 +127,13 @@ int main(){
                 rem = true;
             }
         }
-        // int ind = 0;
         UF dsu(N);
         for(int mid = 1; mid <= M; mid++) {
-            // while(ind < M && mid >= Edges[ind].second) {
-                // dsu.merge(Edges[ind].first, Edges[ind].second);
-                // ind++;
-            // }
             dsu.merge(Edges[mid - 1].first, Edges[mid - 1].second);
             for(auto i : Mq[mid]) {
                 int root_x = dsu.root(X[i]);
                 int root_y = dsu.root(Y[i]);
                 int tot = dsu.Sz[root_x] + dsu.Sz[root_y] * (root_x != root_y);
-                // Error(i, X[i], Y[i], Z[i], Ans[i]);
-                // Error(root_x, root_y);
-                // Error(mid, tot, tot >= Z[i]);
                 if(tot >= Z[i]) {
                     Ans[i] = mid;
                     H[i] = mid - 1;
@@ -157,15 +147,3 @@ int main(){
     }
     return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
