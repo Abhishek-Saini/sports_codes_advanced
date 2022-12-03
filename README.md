@@ -1,2 +1,1 @@
-# sports_codes_advanced
-Non standard/common Competitive Programming Codes
+Relatively non-standard/un-common Competitive Programming Codes
