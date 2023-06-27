@@ -76,7 +76,6 @@ lld UniqueSorted[lim];
 struct WaveletTree {
     vector<vector<int> > M, Pre;
     int n;
-	lld ans;
     // n = number of unique elements, tree is zero-indexed
     WaveletTree(int n) : n(n) {
         M.resize((n << 2) + 5);
