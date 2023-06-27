@@ -84,10 +84,6 @@ struct WaveletTree {
     }
     void buildTree(int st, int end, int ind){
         if(st == end){
-            // change here to initialize
-            // M[ind].emplace_back(A[st]);
-			// Pre[ind].emplace_back(0LL);
-			// Pre[ind].emplace_back(A[st]);
             return ;
         }
         int mid, a, b;
