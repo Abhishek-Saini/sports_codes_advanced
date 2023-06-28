@@ -1,3 +1,4 @@
+// https://www.spoj.com/problems/QTREE3/
 #include <bits/stdc++.h>
 #include <stdlib.h>
 #include <time.h> 
