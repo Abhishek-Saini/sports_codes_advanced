@@ -211,6 +211,8 @@ int ChainHead[lim], ChainNum[lim], PosInChain[lim], PosInFlatArray[lim], Reverse
 // A[] is flat array which is used by seg tree while building
 // Heavy Light Decomposition
 // Cost can be some value associated with the node/path till now, not used in template example
+// TODO(Abhishek) Someday speed it up if needed by pre-calculating values for prefix of heavy paths.
+// So that extra log(n) factor of segment tree can be removed while querying.
 void HLD(int x, int par, int cost) {
     if(ChainHead[totalChains] == -1) ChainHead[totalChains] = x;
     ChainNum[x] = totalChains;
