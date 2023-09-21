@@ -251,6 +251,7 @@ pair<int,int> query(int x, int topNode, SegmentTree& SegTree) {
     return res;
 }
 
+// A[] is the transformed [flatten] array which is used by seg tree while building
 int main(){
     // T = scd();
     int T = 1;
